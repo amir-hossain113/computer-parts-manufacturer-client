@@ -1,9 +1,25 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Login from './Pages/Authentication/Login';
+import Signup from './Pages/Authentication/Signup';
+import Blogs from './Pages/Blogs/Blogs';
+import Home from './Pages/Home/Home';
+import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
+import Navbar from './Pages/Shared/Navbar';
+import PageNotFound from './Pages/Shared/PageNotFound';
 
 function App() {
   return (
-    <div className="App">
-       
+    <div>
+       <Navbar></Navbar>
+       <Routes>
+          <Route path="/" element={<Home></Home>}></Route>
+          <Route path="/blogs" element={<Blogs></Blogs>}></Route>
+          <Route path="/myPortfolio" element={<MyPortfolio></MyPortfolio>}></Route>
+          <Route path="/login" element={<Login></Login>}></Route>
+          <Route path="/signup" element={<Signup></Signup>}></Route>
+          <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
+       </Routes>
     </div>
   );
 }
