@@ -5,6 +5,7 @@ import bannerThree from '../../assets/images/banner/banner3.jpg';
 import bannerFour from '../../assets/images/banner/banner4.jpg';
 
 const Banner = () => {
+   
     return (
         <div class="carousel w-full">
             <div id="slide1" class="carousel-item relative w-full">
