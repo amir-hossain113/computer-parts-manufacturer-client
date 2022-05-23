@@ -16,7 +16,7 @@ const ManageProduct = ({product}) => {
         <div class="card-body items-start text-center">
             <h2 class="card-title">{name}</h2>
             <p className="text-justify">{description}</p>
-            <p><b>Price: </b>{price}</p>
+            <p><b>Price: </b>${price}</p>
             <p><b>Minimum Order Qty: </b>{minimumQuantity}</p>
             <p><b>Available Qty: </b>{availableQuantity}</p>
             <div class="card-actions">
