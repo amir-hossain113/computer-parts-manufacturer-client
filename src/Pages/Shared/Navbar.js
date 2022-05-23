@@ -14,14 +14,17 @@ const Navbar = () => {
 
     const menuItems = <>
         <li><Link to="/blogs">Blogs</Link></li>
-        <li><Link to="/myPortfolio">My Portfolio</Link></li>
-        <li><Link to="/manageProducts">Manage Products</Link></li>
-        <li>{user? <button onClick={logout} class="btn btn-ghost mt-2">Sign Out</button> : <Link to="/login">Login</Link>}</li>
+        <li><Link to="/myPortfolio">MyPortfolio</Link></li>
+        <li>{user? <Link to="/manageProducts">ManageProducts</Link> : ''}</li>
+        {
+            user && <li><Link to="/dashboard">Dashboard</Link></li>
+        }
+        <li>{user? <button onClick={logout} class="btn btn-ghost mt-2 mr-6">Sign Out</button> : <Link to="/login">Login</Link>}</li>
         <li>{user? <small>{user.displayName} <br /> {user.email}</small> : ''}</li>
     </>
 
     return (
-        <div class="navbar bg-accent px-20">
+        <div class="navbar bg-accent px-16">
             <div class="navbar-start">
                 <div class="dropdown">
                 <label tabindex="0" class="btn btn-ghost lg:hidden">
