@@ -13,9 +13,11 @@ const Navbar = () => {
     }
 
     const menuItems = <>
+        <li><Link to="/">Home</Link></li>
         <li><Link to="/blogs">Blogs</Link></li>
+        <li><Link to="/review">Reviews</Link></li>
         <li><Link to="/myPortfolio">MyPortfolio</Link></li>
-        <li>{user? <Link to="/manageProducts">ManageProducts</Link> : ''}</li>
+        <li>{user? <Link to="/manageProduct">ManageProducts</Link> : ''}</li>
         {
             user && <li><Link to="/dashboard">Dashboard</Link></li>
         }
