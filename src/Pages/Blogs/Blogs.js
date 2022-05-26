@@ -69,12 +69,6 @@ const Blogs = () => {
       </div>
       <div class="card w-full bg-base-100 shadow-xl border-double border-4 border-orange-500">
         <div class="card-body">
-          <h2 class="card-title">You have an array of products. Each object has a name, price, description, etc. How will you implement a search to find products by name?</h2>
-          <p></p>
-        </div>
-      </div>
-      <div class="card w-full bg-base-100 shadow-xl border-dotted border-2 border-t-green-500 border-l-green-500">
-        <div class="card-body">
           <h2 class="card-title">What is a unit test? Why should write unit tests?</h2>
           <p>
           UNIT TESTING is a type of software testing where individual units or components of a software are tested. The purpose is to validate that each unit of the software code performs as expected. Unit Testing is done during the development (coding phase) of an application by the developers. Unit Tests isolate a section of code and verify its correctness. A unit may be an individual function, method, procedure, module, or object.
@@ -84,9 +78,15 @@ const Blogs = () => {
           </p>
         </div>
       </div>
+      <div class="card w-full bg-base-100 shadow-xl border-dotted border-2 border-t-green-500 border-l-green-500">
+        <div class="card-body">
+          <h2 class="card-title"></h2>
+          
+        </div>
+      </div>
       <div class="card w-full bg-base-100 shadow-xl border-dotted border-2 border-r-green-500 border-b-green-500">
         <div class="card-body">
-          <h2 class="card-title">Card title!</h2>
+          <h2 class="card-title">You have an array of products. Each object has a name, price, description, etc. How will you implement a search to find products by name?</h2>
           <p></p>
         </div>
       </div>
