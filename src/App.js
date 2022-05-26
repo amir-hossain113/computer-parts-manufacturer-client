@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import './App.css';
 import Login from './Pages/Authentication/Login';
 import RequireAuth from './Pages/Authentication/RequireAuth';
@@ -27,6 +28,8 @@ function App() {
           <Route path="/blogs" element={<Blogs></Blogs>}></Route>
           <Route path="/myPortfolio" element={<MyPortfolio></MyPortfolio>}></Route>
           <Route path="/product" element={<Products></Products>}></Route>
+          <Route path="/login" element={<Login></Login>}></Route>
+          <Route path="/signup" element={<Signup></Signup>}></Route>
           <Route path="/manageProduct" element={
               <RequireAuth>
                   <ManageProducts></ManageProducts>
@@ -37,7 +40,7 @@ function App() {
                   <Purchase></Purchase>
               </RequireAuth>
           }></Route>
-          <Route path="/dashboard" element={
+          <Route path="dashboard" element={
               <RequireAuth>
                   <Dashboard></Dashboard>
               </RequireAuth>}>
@@ -46,10 +49,9 @@ function App() {
                 <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
                 <Route path="payment/:id" element={<Payment></Payment>}></Route>
               </Route>
-          <Route path="/login" element={<Login></Login>}></Route>
-          <Route path="/signup" element={<Signup></Signup>}></Route>
           <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
        </Routes>
+       <ToastContainer/>
        <Footer></Footer>
     </div>
   );

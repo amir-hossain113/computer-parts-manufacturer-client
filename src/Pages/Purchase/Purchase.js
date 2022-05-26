@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { toast } from 'react-toastify';
 
 
 const Purchase = () => {
@@ -40,14 +41,26 @@ const Purchase = () => {
             email: user.email,
             address: event.target.address.value,
             phone: event.target.phone.value,
-            name: product.name,
+            productName: product.name,
             description: product.description,
             price: Number((product.price)* Number(quantity)),
-            minimumQuantity: Number(product.minimumQuantity),
-            availableQuantity: Number(product.availableQuantity),
             totalOrderQuantity: Number(event.target.quantity.value)
         }
-        console.log(order);
+        
+
+        fetch('http://localhost:5000/order', {
+            method: 'POST',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.success){
+                toast('Your order is added successfully');
+            }
+        })
        
     }
     
@@ -66,7 +79,7 @@ const Purchase = () => {
                     <div className='lg:px-10 py-10'>
                         <h2 className='text-accent text-xl'><b className='text-orange-700'>Name: </b>{product.name}</h2><br />
                         <p><b className='text-orange-700'>Description: </b>{product.description}</p><br />
-                        <p><b className='text-lime-600'>Price: </b>${product.price}</p>
+                        <p><b className='text-lime-600'>Price: </b>${product.price} (per unit)</p>
                         <p><b className='text-cyan-700'>Minimum Order Qty: </b>{product.minimumQuantity}</p>
                         <p><b className='text-cyan-700'>Available Qty: </b>{product.availableQuantity}</p>
                     </div>
@@ -193,7 +206,7 @@ const Purchase = () => {
                         </div>
 
                         {error && <p className='text-red-500'>Sorry you can't order less than {product.minimumQuantity} units & more than {product.availableQuantity} units</p>}
-                        
+
                         <input
                             className="btn btn-success w-full mx-w-xs"
                             disabled={error}
