@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const MyOrders = () => {
@@ -18,6 +19,27 @@ const MyOrders = () => {
             .then(data => setMyOrders(data))
     }, [user])
 
+    const handleDelete = id => {
+      const proceed = window.confirm('Are you sure to delete this order?');
+      if(proceed){
+          const url = `http://localhost:5000/order/myOrder/${id}`
+          fetch(url, {
+              method: 'DELETE'
+          })
+          .then(res => res.json())
+          .then(data => {
+              console.log(data);
+              const remaining = myOrders.filter(myOrder => myOrder._id !== id);
+              setMyOrders(remaining);
+              alert('Item deleted successfully');
+          })
+        }
+    }
+
+    const handlePayment = () => {
+
+    }
+
 
     return (
         <div>
@@ -28,13 +50,13 @@ const MyOrders = () => {
                         <tr>
                             <th>No.</th>
                             <th>Name</th>
-                            <th>Email</th>
+                            {/* <th>Email</th> */}
                             <th>address</th>
                             <th>phone</th>
                             <th>Parts Name</th>
                             <th>Price</th>
                             <th>Order Quantity</th>
-                            <th>Description</th>
+                            <th colSpan={2}>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -42,13 +64,17 @@ const MyOrders = () => {
                             myOrders.map((myOrder, index) => <tr>
                                 <th>{index + 1}</th>
                                 <td>{myOrder.userName}</td>
-                                <td>{myOrder.email}</td>
+                                {/* <td>{myOrder.email}</td> */}
                                 <td>{myOrder.address}</td>
                                 <td>{myOrder.phone}</td>
                                 <td>{myOrder.productName}</td>
                                 <td>{myOrder.price}</td>
                                 <td>{myOrder.totalOrderQuantity}</td>
-                                <td>{myOrder.description}</td>
+                                <td>
+                                    {(myOrder.price && !myOrder.paid )&& <Link to={`/dashboard/payment/${myOrder._id}`}><button className="btn btn-xs btn-success">Pay</button></Link>}
+                                    {(myOrder.price && !myOrder.paid )&& <button className='btn btn-xs btn-warning mt-4' onClick={() => handleDelete(myOrder._id)}>Delete</button>}
+                                    {(myOrder.price && myOrder.paid )&& <span className="text-success">Paid</span>}
+                                </td>
                             </tr>)
                         }
                     </tbody>

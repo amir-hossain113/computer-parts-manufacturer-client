@@ -15,6 +15,7 @@ import Products from './Pages/Home/Products';
 import ManageProducts from './Pages/ManageProducts/ManageProducts';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 import Purchase from './Pages/Purchase/Purchase';
+import ViewDetail from './Pages/Purchase/ViewDetail';
 import Footer from './Pages/Shared/Footer';
 import Navbar from './Pages/Shared/Navbar';
 import PageNotFound from './Pages/Shared/PageNotFound';
@@ -35,6 +36,12 @@ function App() {
                   <ManageProducts></ManageProducts>
               </RequireAuth>
           }></Route>
+          <Route path="/viewDetail/:productId" element={
+              <RequireAuth>
+                  <ViewDetail></ViewDetail>
+              </RequireAuth>
+          }>
+          </Route>
           <Route path="/product/:productId" element={
               <RequireAuth>
                   <Purchase></Purchase>

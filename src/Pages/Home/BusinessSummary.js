@@ -7,7 +7,7 @@ import parts from '../../assets/images/icon/parts.png';
 
 const BusinessSummary = () => {
     return (
-        <div className='mb-10 mt-32'>
+        <div className='my-20 mt-32'>
             <div>
                 <h2 className='text-center text-5xl text-sky-300 font-bold mb-20'>MILLIONS BUSINESS TRUST US <br /> <span className='text-xl text-center text-black'>TRY TO UNDERSTAND USER EXPECTATION</span></h2>
             </div>
