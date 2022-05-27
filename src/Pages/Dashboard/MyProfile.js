@@ -37,8 +37,8 @@ const MyProfile = () => {
 
   return (
     <div className="mb-10 px-10 py-10">
-        <h2 className="text-center text-3xl mb-4">My Profile</h2>
       <form onSubmit={handleProfile} className="grid grid-cols-1 gap-3 justify-items-center mt-2 border-2 px-10 py-10 lg:p-20 border-orange-700">
+      <h2 className="text-center text-3xl mb-4">My Profile</h2>
         <div class="form-control w-full">
           <label class="label">
             <span class="label-text">Name</span>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const AddReview = () => {
 
@@ -19,7 +20,12 @@ const AddReview = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            if(data){
+                toast.success('Your review added successfully');
+            }
+            else{
+                toast.error('Sorry your review failed to add!!');
+            }
         })
     }
 

@@ -50,7 +50,6 @@ const MyOrders = () => {
                         <tr>
                             <th>No.</th>
                             <th>Name</th>
-                            {/* <th>Email</th> */}
                             <th>address</th>
                             <th>phone</th>
                             <th>Parts Name</th>
@@ -64,7 +63,6 @@ const MyOrders = () => {
                             myOrders.map((myOrder, index) => <tr>
                                 <th>{index + 1}</th>
                                 <td>{myOrder.userName}</td>
-                                {/* <td>{myOrder.email}</td> */}
                                 <td>{myOrder.address}</td>
                                 <td>{myOrder.phone}</td>
                                 <td>{myOrder.productName}</td>

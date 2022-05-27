@@ -58,12 +58,12 @@ const BusinessSummary = () => {
                     <div class= "flex justify-center items-center px-10 py-10">
                         <div className=''>
                             <h2 class="card-title text-2xl text-fuchsia-400">Have any question about us or get a product request?</h2>
-                            <p className='text-xl'>Don't hesitate, feel free to contact us</p>
+                            <p className='text-xl'>Don't hesitate, feel free to contact us.You will find a contact form below the review section, fill it up & send it to us..</p>
                         </div>
-                        <div class="card-actions justify-end w-full">
+                        {/* <div class="card-actions justify-end w-full">
                             <button class="btn btn-success">Request for quote</button>
-                            <button class="btn btn-error">Contact us</button>
-                        </div>
+                            <button class="btn btn-error" action="#anchor">Contact us</button>
+                        </div> */}
                     </div>
                 </div>
             </div>
