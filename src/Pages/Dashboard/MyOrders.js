@@ -1,22 +1,39 @@
+import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const MyOrders = () => {
     const [myOrders, setMyOrders] = useState([]);
     const [user] = useAuthState(auth);
     const [email, setEmail] = useState(user?.email);
+    console.log(myOrders);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/order/myOrder/${email}`, {
+        if(user){
+            fetch(`http://localhost:5000/order/myOrder/${email}`, {
             method: 'GET',
             headers: {
-                'content-type' : 'application/json'
+                'authorization' : `Bearer ${localStorage.getItem('accessToken')}`,
+                // 'content-type' : 'application/json'
             }
         })
-            .then(res => res.json())
-            .then(data => setMyOrders(data))
+            .then(res => {
+                if(res.status === 401 || res.status === 403){
+                    signOut(auth);
+                    localStorage.removeItem('accessToken')
+                    Navigate('/')
+                }
+                return res.json()
+            })
+            // .then(res => res.json())
+            .then(data => {
+                setMyOrders(data)
+                console.log(data)
+            })
+        }
+        
     }, [user])
 
     const handleDelete = id => {
