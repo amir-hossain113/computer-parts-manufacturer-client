@@ -34,7 +34,7 @@ const Contact = () => {
     }
 
     return (
-           <div className='w-full lg:px-40 px-10 py-20 mx-auto card'>
+           <div className='w-full lg:px-40 px-10 py-20 mx-auto'>
                <h2 className='text-center text-2xl text-amber-400 mb-10 font-bold'>Contact Us</h2>
                 <form  onSubmit={handleContact} className='grid grid-cols-1 gap-3 justify-items-center mt-2 border-2 border-dotted px-10 py-10 lg:p-20 border-green-500'>
 

@@ -147,7 +147,7 @@ const MyProfile = () => {
         </div>
 
         <input
-          className="btn btn-primary w-full mx-w-xs"
+          className="btn btn-primary w-full mx-w-xs mt-4"
           type="submit"
           value="Update Profile"
         />
