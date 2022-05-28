@@ -3,9 +3,9 @@ import React from "react";
 const Blogs = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-10 gap-x-10 mx-10 mt-10 mb-10">
-      <div class="card w-full bg-base-100 shadow-xl border-dashed border-2 border-r-cyan-500 border-b-green-500">
-        <div class="card-body">
-          <h2 class="card-title">How will you improve the performance of a React Application?</h2>
+      <div className="card w-full bg-base-100 shadow-xl border-dashed border-2 border-r-cyan-500 border-b-green-500">
+        <div className="card-body">
+          <h2 className="card-title">How will you improve the performance of a React Application?</h2>
           <p>If you follow these steps you will improve the performance of a react application:</p>
               <p>1. Using Immutable Data Structures</p>
               <p>2. Use React.Fragments to Avoid Additional HTML Element Wrappers</p>
@@ -21,9 +21,9 @@ const Blogs = () => {
               <p>12. App's loading time improvement by lazy loading</p>
         </div>
       </div>
-      <div class="card w-full bg-base-100 shadow-xl border-dashed border-2 border-l-cyan-500 border-b-green-500">
-        <div class="card-body">
-          <h2 class="card-title">What are the different ways to manage a state in a React application?</h2>
+      <div className="card w-full bg-base-100 shadow-xl border-dashed border-2 border-l-cyan-500 border-b-green-500">
+        <div className="card-body">
+          <h2 className="card-title">What are the different ways to manage a state in a React application?</h2>
           <p>There are four main types of state you need to properly manage in your React apps:</p>
               <li>Local state</li>
               <li>Global state</li>
@@ -49,9 +49,9 @@ const Blogs = () => {
           </p>
         </div>
       </div>
-      <div class="card w-full bg-base-100 shadow-xl border-double border-4 border-orange-500">
-        <div class="card-body">
-          <h2 class="card-title">How does prototypical inheritance work?</h2>
+      <div className="card w-full bg-base-100 shadow-xl border-double border-4 border-orange-500">
+        <div className="card-body">
+          <h2 className="card-title">How does prototypical inheritance work?</h2>
           <p>
           JavaScript is a prototype-based, Object Oriented programming language. After the ES6 updates, JavaScript allowed for “prototypal inheritance”, meaning that objects and methods can be shared, extended, and copied.
           </p>
@@ -67,9 +67,9 @@ const Blogs = () => {
           </p>
         </div>
       </div>
-      <div class="card w-full bg-base-100 shadow-xl border-double border-4 border-orange-500">
-        <div class="card-body">
-          <h2 class="card-title">What is a unit test? Why should write unit tests?</h2>
+      <div className="card w-full bg-base-100 shadow-xl border-double border-4 border-orange-500">
+        <div className="card-body">
+          <h2 className="card-title">What is a unit test? Why should write unit tests?</h2>
           <p>
           UNIT TESTING is a type of software testing where individual units or components of a software are tested. The purpose is to validate that each unit of the software code performs as expected. Unit Testing is done during the development (coding phase) of an application by the developers. Unit Tests isolate a section of code and verify its correctness. A unit may be an individual function, method, procedure, module, or object.
           </p>
@@ -79,16 +79,16 @@ const Blogs = () => {
         </div>
       </div>
      
-      {/* <div class="card w-full bg-base-100 shadow-xl border-dotted border-2 border-r-green-500 border-b-green-500">
-        <div class="card-body">
-          <h2 class="card-title">Why you do not set the state directly in React. For example, if you have `const [products, setProducts] = useState([])`. Why you do not set `products = [...]` instead, you use the `setProducts`</h2>
+      {/* <div className="card w-full bg-base-100 shadow-xl border-dotted border-2 border-r-green-500 border-b-green-500">
+        <div className="card-body">
+          <h2 className="card-title">Why you do not set the state directly in React. For example, if you have `const [products, setProducts] = useState([])`. Why you do not set `products = [...]` instead, you use the `setProducts`</h2>
           <p></p>
         </div>
       </div>
 
-      <div class="card w-full bg-base-100 shadow-xl border-dotted border-2 border-r-green-500 border-b-green-500">
-        <div class="card-body">
-          <h2 class="card-title">You have an array of products. Each object has a name, price, description, etc. How will you implement a search to find products by name?</h2>
+      <div className="card w-full bg-base-100 shadow-xl border-dotted border-2 border-r-green-500 border-b-green-500">
+        <div className="card-body">
+          <h2 className="card-title">You have an array of products. Each object has a name, price, description, etc. How will you implement a search to find products by name?</h2>
           <p></p>
         </div>
       </div> */}

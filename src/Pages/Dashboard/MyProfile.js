@@ -71,78 +71,78 @@ const MyProfile = () => {
        </div>
       <form onSubmit={handleProfile} className="mt-2 border-2 px-10 py-10 lg:px-20 border-orange-700">
       <h2 className="text-center text-3xl mb-4">Update Profile</h2>
-        <div class="form-control w-full">
-          <label class="label">
-            <span class="label-text">Name</span>
+        <div className="form-control w-full">
+          <label className="label">
+            <span className="label-text">Name</span>
           </label>
           <input
             value={user?.displayName}
             name="name"
             disabled
-            class="input input-bordered w-full"
+            className="input input-bordered w-full"
           />
         </div>
 
-        <div class="form-control w-full">
-          <label class="label">
-            <span class="label-text">Email</span>
+        <div className="form-control w-full">
+          <label className="label">
+            <span className="label-text">Email</span>
           </label>
           <input
             type="email"
             value={user?.email}
             disabled
-            class="input input-bordered w-full"
+            className="input input-bordered w-full"
           />
         </div>
 
-        <div class="form-control w-full">
-          <label class="label">
-            <span class="label-text">Education</span>
+        <div className="form-control w-full">
+          <label className="label">
+            <span className="label-text">Education</span>
           </label>
           <textarea
             type="text"
             name="education"
             placeholder="add your education"
-            class="input input-bordered w-full"
+            className="input input-bordered w-full"
             required
           />
         </div>
 
-        <div class="form-control w-full">
-          <label class="label">
-            <span class="label-text">Location (city/district)</span>
+        <div className="form-control w-full">
+          <label className="label">
+            <span className="label-text">Location (city/district)</span>
           </label>
           <input
             type="text"
             name="location"
             placeholder="Your Location"
-            class="input input-bordered w-full"
+            className="input input-bordered w-full"
             required
           />
         </div>
 
-        <div class="form-control w-full">
-          <label class="label">
-            <span class="label-text">Phone</span>
+        <div className="form-control w-full">
+          <label className="label">
+            <span className="label-text">Phone</span>
           </label>
           <input
             type="text"
             name="phone"
             placeholder="Your phone number"
-            class="input input-bordered w-full"
+            className="input input-bordered w-full"
             required
           />
         </div>
 
-        <div class="form-control w-full">
-          <label class="label">
-            <span class="label-text">Linkedin Profile Link</span>
+        <div className="form-control w-full">
+          <label className="label">
+            <span className="label-text">Linkedin Profile Link</span>
           </label>
           <input
             type="text"
             name="linkedinProfile"
             placeholder="Your linkedin profile link"
-            class="input input-bordered w-full"
+            className="input input-bordered w-full"
           />
         </div>
 

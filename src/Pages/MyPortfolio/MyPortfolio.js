@@ -3,10 +3,10 @@ import React from 'react';
 const MyPortfolio = () => {
     return (
         <div className='p-10'>
-            <div class="card w-full px-10 bg-base-100 shadow-xl mt-6 mb-10">
+            <div className="card w-full px-10 bg-base-100 shadow-xl mt-6 mb-10">
             <h2 className='text-3xl text-center font-bold text-purple-400'>My Portfolio</h2>
-                <div class="card-body mx-auto">
-                    <h2 class="text-center text-emerald-400 text-2xl font-bold">This is Amir Hossain</h2>
+                <div className="card-body mx-auto">
+                    <h2 className="text-center text-emerald-400 text-2xl font-bold">This is Amir Hossain</h2>
                     <p className='text-center mb-5'>My email address is <span className='text-orange-800'>amirhossain.cse@gmail.com</span></p>
                     <h2 className='text-2xl font-bold text-teal-800'>✅ Educational Background:</h2>
                     <div className='ml-5 mb-5'>
@@ -18,17 +18,17 @@ const MyPortfolio = () => {
                     <h2 className='text-2xl font-bold text-teal-800'>✅ List of technology or skills:</h2>
                     <div className='mx-5 mb-5'>
                         <h2 className='font-bold text-xl'>HTML5</h2>
-                        <progress class="progress progress-success min-w-full h-3" value="90" max="100"></progress>
+                        <progress className="progress progress-success min-w-full h-3" value="90" max="100"></progress>
                         <h2 className='font-bold text-xl'>CSS3</h2>
-                        <progress class="progress progress-primary min-w-full h-3" value="80" max="100"></progress>
+                        <progress className="progress progress-primary min-w-full h-3" value="80" max="100"></progress>
                         <h2 className='font-bold text-xl'>Java Script</h2>
-                        <progress class="progress progress-secondary min-w-full h-3" value="70" max="100"></progress>
+                        <progress className="progress progress-secondary min-w-full h-3" value="70" max="100"></progress>
                         <h2 className='font-bold text-xl'>React</h2>
-                        <progress class="progress progress-error min-w-full h-3" value="50" max="100"></progress>
+                        <progress className="progress progress-error min-w-full h-3" value="50" max="100"></progress>
                         <h2 className='font-bold text-xl'>Node</h2>
-                        <progress class="progress progress-accent min-w-full h-3" value="40" max="100"></progress>
+                        <progress className="progress progress-accent min-w-full h-3" value="40" max="100"></progress>
                         <h2 className='font-bold text-xl'>Mongo DB</h2>
-                        <progress class="progress progress-warning min-w-full h-3" value="30" max="100"></progress>
+                        <progress className="progress progress-warning min-w-full h-3" value="30" max="100"></progress>
                     </div>
                     <h2 className='text-2xl font-bold text-teal-800'>✅ Live website link of my three project:</h2>
                     <div className='ml-5 mb-5'>

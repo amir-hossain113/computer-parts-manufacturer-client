@@ -79,110 +79,110 @@ const Purchase = () => {
            <div className='w-full lg:px-40 px-10 py-20 mx-auto'>
                 <form onSubmit={handleOrder} className='grid grid-cols-1 gap-3 justify-items-center mt-2 border-2 px-10 py-10 lg:p-20 border-orange-700'>
 
-                        <div class="form-control w-full">
-                            <label class="label">
-                                <span class="label-text">Name</span>
+                        <div className="form-control w-full">
+                            <label className="label">
+                                <span className="label-text">Name</span>
                             </label>
                             <input 
                                 value={user?.displayName} 
                                 name="name"
                                 disabled
-                                class="input input-bordered w-full" />
+                                className="input input-bordered w-full" />
                         </div>
 
-                        <div class="form-control w-full">
-                            <label class="label">
-                                <span class="label-text">Email</span>
+                        <div className="form-control w-full">
+                            <label className="label">
+                                <span className="label-text">Email</span>
                             </label>
                             <input 
                                 type="email" 
                                 value={user?.email} 
                                 disabled
-                                class="input input-bordered w-full"  />
+                                className="input input-bordered w-full"  />
                         </div>
 
-                        <div class="form-control w-full">
-                            <label class="label">
-                                <span class="label-text">Address</span>
+                        <div className="form-control w-full">
+                            <label className="label">
+                                <span className="label-text">Address</span>
                             </label>
                             <input 
                                 type="text" 
                                 name="address"
                                 placeholder='Your Address' 
-                                class="input input-bordered w-full" required />
+                                className="input input-bordered w-full" required />
                            
                         </div>
 
-                        <div class="form-control w-full">
-                            <label class="label">
-                                <span class="label-text">Phone</span>
+                        <div className="form-control w-full">
+                            <label className="label">
+                                <span className="label-text">Phone</span>
                             </label>
                             <input 
                                 type="text" 
                                 name="phone"
                                 placeholder='Your Phone'
-                                class="input input-bordered w-full" required/>
+                                className="input input-bordered w-full" required/>
                            
                         </div>
 
-                        <div class="form-control w-full">
-                            <label class="label">
-                                <span class="label-text">Parts Name</span>
+                        <div className="form-control w-full">
+                            <label className="label">
+                                <span className="label-text">Parts Name</span>
                             </label>
                             <input 
                                 type="text" 
                                 value={product.name} 
                                 disabled
-                                class="input input-bordered w-full"  />
+                                className="input input-bordered w-full"  />
                         </div>
 
-                        <div class="form-control w-full">
-                            <label class="label">
-                                <span class="label-text">Description</span>
+                        <div className="form-control w-full">
+                            <label className="label">
+                                <span className="label-text">Description</span>
                             </label>
                             <textarea 
                                 type="text" 
                                 value={product.description} 
                                 disabled
-                                class="input input-bordered w-full"  />
+                                className="input input-bordered w-full"  />
                         </div>
 
-                        <div class="form-control w-full">
-                            <label class="label">
-                                <span class="label-text">Price</span>
+                        <div className="form-control w-full">
+                            <label className="label">
+                                <span className="label-text">Price</span>
                             </label>
                             <input 
                                 type="text" 
                                 value={product.price} 
                                 disabled
-                                class="input input-bordered w-full" />
+                                className="input input-bordered w-full" />
                         </div>
 
-                        <div class="form-control w-full">
-                            <label class="label">
-                                <span class="label-text">Minimum Order Quantity</span>
+                        <div className="form-control w-full">
+                            <label className="label">
+                                <span className="label-text">Minimum Order Quantity</span>
                             </label>
                             <input 
                                 type="text" 
                                 value={product.minimumQuantity} 
                                 disabled
-                                class="input input-bordered w-full"  />
+                                className="input input-bordered w-full"  />
                         </div>
 
-                        <div class="form-control w-full">
-                            <label class="label">
-                                <span class="label-text">Available Quantity</span>
+                        <div className="form-control w-full">
+                            <label className="label">
+                                <span className="label-text">Available Quantity</span>
                             </label>
                             <input 
                                 type="text" 
                                 value={product.availableQuantity} 
                                 disabled
-                                class="input input-bordered w-full"  />
+                                className="input input-bordered w-full"  />
                         </div>
 
-                        <div class="form-control w-full">
-                            <label class="label">
-                                <span class="label-text">Total Order Quantity</span>
+                        <div className="form-control w-full">
+                            <label className="label">
+                                <span className="label-text">Total Order Quantity</span>
                             </label>
                             <input
                             type="number"
@@ -190,7 +190,7 @@ const Purchase = () => {
                             id="quantity"
                             value={quantity}
                             onChange={(e) => setQuantity(e.target.value)}
-                            class="input input-bordered w-full"
+                            className="input input-bordered w-full"
                             required
                             />
                         </div>

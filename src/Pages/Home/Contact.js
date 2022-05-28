@@ -38,51 +38,51 @@ const Contact = () => {
                <h2 className='text-center text-2xl text-amber-400 mb-10 font-bold'>Contact Us</h2>
                 <form  onSubmit={handleContact} className='grid grid-cols-1 gap-3 justify-items-center mt-2 border-2 border-dotted px-10 py-10 lg:p-20 border-green-500'>
 
-                        <div class="form-control w-full">
-                            <label class="label">
-                                <span class="label-text">Name</span>
+                        <div className="form-control w-full">
+                            <label className="label">
+                                <span className="label-text">Name</span>
                             </label>
                             <input 
                                 value={user?.displayName} 
                                 name="name"
                                 disabled
-                                class="input input-bordered w-full" />
+                                className="input input-bordered w-full" />
                         </div>
 
-                        <div class="form-control w-full">
-                            <label class="label">
-                                <span class="label-text">Email</span>
+                        <div className="form-control w-full">
+                            <label className="label">
+                                <span className="label-text">Email</span>
                             </label>
                             <input 
                                 type="email" 
                                 value={user?.email} 
                                 disabled
-                                class="input input-bordered w-full"  />
+                                className="input input-bordered w-full"  />
                         </div>
 
-                        <div class="form-control w-full">
-                            <label class="label">
-                                <span class="label-text">Phone</span>
+                        <div className="form-control w-full">
+                            <label className="label">
+                                <span className="label-text">Phone</span>
                             </label>
                             <input 
                                 type="text" 
                                 name="phone"
                                 placeholder='Your Phone Number' 
-                                class="input input-bordered w-full" 
+                                className="input input-bordered w-full" 
                                 required 
                             />
                            
                         </div>
 
-                        <div class="form-control w-full">
-                            <label class="label">
-                                <span class="label-text">Message</span>
+                        <div className="form-control w-full">
+                            <label className="label">
+                                <span className="label-text">Message</span>
                             </label>
                             <textarea 
                                 type="text" 
                                 name="message"
                                 placeholder='Your Message'
-                                class="input input-bordered w-full" 
+                                className="input input-bordered w-full" 
                                 required
                             />
                            

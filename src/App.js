@@ -3,6 +3,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import Login from './Pages/Authentication/Login';
+import RequireAdmin from './Pages/Authentication/RequireAdmin';
 import RequireAuth from './Pages/Authentication/RequireAuth';
 import Signup from './Pages/Authentication/Signup';
 import Blogs from './Pages/Blogs/Blogs';
@@ -59,7 +60,7 @@ function App() {
                 <Route path="addReview" element={<AddReview></AddReview>}></Route>
                 <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
                 <Route path="payment/:id" element={<Payment></Payment>}></Route>
-                <Route path="users" element={<Users></Users>}></Route>
+                <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
                 <Route path="addProduct" element={<AddProduct></AddProduct>}></Route>
                 <Route path="allOrders" element={<AllOrders></AllOrders>}></Route>
               </Route>

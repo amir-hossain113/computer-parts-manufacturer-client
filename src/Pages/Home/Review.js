@@ -6,9 +6,9 @@ const Review = ({review}) => {
 
     return (
         <div>
-            <div class="card w-96 bg-base-100 shadow-xl">
-                <div class="card-body">
-                    <h2 class="card-title text-green-700">Rating: <span className='text text-amber-700'>{rating}</span><img src={starIcon} alt="" className='w-4 h-4' /> </h2>
+            <div className="card w-96 bg-base-100 shadow-xl">
+                <div className="card-body">
+                    <h2 className="card-title text-green-700">Rating: <span className='text text-amber-700'>{rating}</span><img src={starIcon} alt="" className='w-4 h-4' /> </h2>
                     <p>{description}</p>
                 </div>
             </div>
