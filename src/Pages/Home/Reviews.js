@@ -8,7 +8,8 @@ const Reviews = () => {
         fetch('http://localhost:5000/review', {
             method: 'GET',
             headers: {
-                'content-type' : 'application/json'
+                'content-type' : 'application/json',
+                // 'authorization' : `Bearer ${localStorage.getItem('accessToken')}`
             }
         })
         .then(res => res.json())

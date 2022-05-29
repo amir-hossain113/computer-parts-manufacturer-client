@@ -12,7 +12,8 @@ const MyProfile = () => {
       fetch(`http://localhost:5000/user/${email}`, {
         method: 'GET',
         headers: {
-          'content-type' : 'application/json'
+          'content-type' : 'application/json',
+          // 'authorization' : `Bearer ${localStorage.getItem('accessToken')}`
         }
       })
       .then(res => res.json())
@@ -58,7 +59,7 @@ const MyProfile = () => {
        <h2 className="text-center text-3xl mb-4">My Profile</h2>
        <div className="lg:flex gap-5 justify-center items-center w-full my-10 border-2 border-dashed border-green-900 p-20">
          <div className="w-56">
-           <img src={user.photoURL} className="w-48 rounded-lg" alt="" />
+           <img src={user.photoURL} className="w-48 rounded-lg" alt="google-accounts-img" />
          </div>
          <div>
            <h2>{user.displayName}</h2>

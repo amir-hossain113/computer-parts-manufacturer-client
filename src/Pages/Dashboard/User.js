@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 
 const User = ({user, index, refetch}) => {
@@ -7,8 +7,8 @@ const User = ({user, index, refetch}) => {
         fetch(`http://localhost:5000/user/admin/${email}`, {
             method: 'Put',
             headers: {
-                'authorization' : `Bearer ${localStorage.getItem('accessToken')}`
-                // 'content-type' : 'application/json'
+                'authorization' : `Bearer ${localStorage.getItem('accessToken')}`,
+                'content-type' : 'application/json'
             }
         })
         .then(res => {
@@ -25,6 +25,7 @@ const User = ({user, index, refetch}) => {
            
         })
     }
+
 
     return (
         <tr>

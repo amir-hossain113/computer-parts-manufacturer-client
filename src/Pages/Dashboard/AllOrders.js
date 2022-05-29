@@ -17,7 +17,7 @@ const AllOrders = () => {
 
     return (
         <div>
-            <h2 className='text-xl text-teal-900 mt-2'>All Orders: {allOrders.length}</h2>
+            <h2 className='text-xl text-teal-900 mt-2'>All Orders: {allOrders?.length}</h2>
             <div className="overflow-x-auto mt-4">
                 <table className="table w-full">
                     <thead>
@@ -33,8 +33,9 @@ const AllOrders = () => {
                         </tr>
                     </thead>
                     <tbody>
+
                         {
-                            allOrders.map((allOrder, index) => <tr>
+                            allOrders?.map((allOrder, index) => <tr>
                                 <th>{index + 1}</th>
                                 <td>{allOrder.userName}</td>
                                 <td>{allOrder.address}</td>

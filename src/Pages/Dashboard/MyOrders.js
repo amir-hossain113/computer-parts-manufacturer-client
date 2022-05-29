@@ -15,8 +15,8 @@ const MyOrders = () => {
             fetch(`http://localhost:5000/order/myOrder/${email}`, {
             method: 'GET',
             headers: {
-                'authorization' : `Bearer ${localStorage.getItem('accessToken')}`,
-                // 'content-type' : 'application/json'
+                'content-type' : 'application/json',
+                'authorization' : `Bearer ${localStorage.getItem('accessToken')}`
             }
         })
             .then(res => {
@@ -53,9 +53,6 @@ const MyOrders = () => {
         }
     }
 
-    const handlePayment = () => {
-
-    }
 
 
     return (
@@ -77,7 +74,7 @@ const MyOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            myOrders.map((myOrder, index) => <tr>
+                            myOrders.map((myOrder, index) => <tr key={myOrder._id}>
                                 <th>{index + 1}</th>
                                 <td>{myOrder.userName}</td>
                                 <td>{myOrder.address}</td>
@@ -88,7 +85,10 @@ const MyOrders = () => {
                                 <td>
                                     {(myOrder.price && !myOrder.paid )&& <Link to={`/dashboard/payment/${myOrder._id}`}><button className="btn btn-xs btn-success">Pay</button></Link>}
                                     {(myOrder.price && !myOrder.paid )&& <button className='btn btn-xs btn-warning mt-4' onClick={() => handleDelete(myOrder._id)}>Delete</button>}
-                                    {(myOrder.price && myOrder.paid )&& <span className="text-success">Paid</span>}
+                                    {(myOrder.price && myOrder.paid )&& <>
+                                            <p><span className="text-success">Paid</span></p>
+                                            <p>Transaction Id: <span className="text-success">{myOrder.transactionId}</span></p>
+                                        </>}
                                 </td>
                             </tr>)
                         }
