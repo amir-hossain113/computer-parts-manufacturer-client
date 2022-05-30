@@ -29,7 +29,7 @@ const AllOrders = () => {
                             <th>Parts Name</th>
                             <th>Price</th>
                             <th>Order Quantity</th>
-                            <th colSpan={2}>Action</th>
+                            {/* <th colSpan={2}>Action</th> */}
                         </tr>
                     </thead>
                     <tbody>
@@ -43,9 +43,9 @@ const AllOrders = () => {
                                 <td>{allOrder.productName}</td>
                                 <td>{allOrder.price}</td>
                                 <td>{allOrder.totalOrderQuantity}</td>
-                                <td>
-                                    {/* {(!allOrder.paid )&& <Link><button className="btn btn-xs btn-success">Pay</button></Link>} */}
-                                </td>
+                                {/* <td>
+                                    {(!allOrder.paid )&& <Link><button className="btn btn-xs btn-success">Shipped</button></Link>}
+                                </td> */}
                             </tr>)
                         }
                     </tbody>
